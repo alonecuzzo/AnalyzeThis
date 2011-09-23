@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C1FD19D142D2F6A007A3A67 /* RequestAnalyticsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C1FD19B142D2F69007A3A67 /* RequestAnalyticsViewController.m */; };
+		0C1FD19E142D2F6A007A3A67 /* RequestAnalyticsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C1FD19C142D2F6A007A3A67 /* RequestAnalyticsViewController.xib */; };
 		0C527301142D23DA004F524A /* SendAnalyticsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C5272FF142D23DA004F524A /* SendAnalyticsViewController.m */; };
 		0C527302142D23DA004F524A /* SendAnalyticsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C527300142D23DA004F524A /* SendAnalyticsViewController.xib */; };
 		0C70D5C1142D150400CBB1D8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C70D5C0142D150400CBB1D8 /* UIKit.framework */; };
@@ -25,6 +27,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0C1FD19A142D2F69007A3A67 /* RequestAnalyticsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestAnalyticsViewController.h; sourceTree = "<group>"; };
+		0C1FD19B142D2F69007A3A67 /* RequestAnalyticsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestAnalyticsViewController.m; sourceTree = "<group>"; };
+		0C1FD19C142D2F6A007A3A67 /* RequestAnalyticsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RequestAnalyticsViewController.xib; sourceTree = "<group>"; };
 		0C5272FE142D23DA004F524A /* SendAnalyticsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendAnalyticsViewController.h; sourceTree = "<group>"; };
 		0C5272FF142D23DA004F524A /* SendAnalyticsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendAnalyticsViewController.m; sourceTree = "<group>"; };
 		0C527300142D23DA004F524A /* SendAnalyticsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SendAnalyticsViewController.xib; sourceTree = "<group>"; };
@@ -129,6 +134,9 @@
 				0C5272FE142D23DA004F524A /* SendAnalyticsViewController.h */,
 				0C5272FF142D23DA004F524A /* SendAnalyticsViewController.m */,
 				0C527300142D23DA004F524A /* SendAnalyticsViewController.xib */,
+				0C1FD19A142D2F69007A3A67 /* RequestAnalyticsViewController.h */,
+				0C1FD19B142D2F69007A3A67 /* RequestAnalyticsViewController.m */,
+				0C1FD19C142D2F6A007A3A67 /* RequestAnalyticsViewController.xib */,
 			);
 			name = iPhone;
 			sourceTree = "<group>";
@@ -203,6 +211,7 @@
 				0C70D5D8142D150400CBB1D8 /* MainWindow_iPhone.xib in Resources */,
 				0C70D5DF142D150400CBB1D8 /* MainWindow_iPad.xib in Resources */,
 				0C527302142D23DA004F524A /* SendAnalyticsViewController.xib in Resources */,
+				0C1FD19E142D2F6A007A3A67 /* RequestAnalyticsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,6 +227,7 @@
 				0C70D5D5142D150400CBB1D8 /* AnalyzeThisAppDelegate_iPhone.m in Sources */,
 				0C70D5DC142D150400CBB1D8 /* AnalyzeThisAppDelegate_iPad.m in Sources */,
 				0C527301142D23DA004F524A /* SendAnalyticsViewController.m in Sources */,
+				0C1FD19D142D2F6A007A3A67 /* RequestAnalyticsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
