@@ -10,7 +10,12 @@
 
 
 @interface RequestAnalyticsViewController : UIViewController {
-    
+    UIDatePicker *datePicker;
 }
+
+@property (nonatomic, retain) UIDatePicker *datePicker;
+
+-(IBAction)startDateButtonPressed:(id)sender;
+-(IBAction)endDateButtonPressed:(id)sender;
 
 @end

@@ -10,6 +10,7 @@
 
 
 @implementation RequestAnalyticsViewController
+@synthesize datePicker;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -39,6 +40,12 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    datePicker = [[UIDatePicker alloc] initWithFrame:CGRectMake(0, 480, 320, 270)];
+    NSLog(@"date picker init");
+    [self.view addSubview:datePicker];
+    [datePicker release];
+
 }
 
 - (void)viewDidUnload
@@ -52,6 +59,22 @@
 {
     // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+
+#pragma mark - Button actions
+-(IBAction)startDateButtonPressed:(id)sender {
+    NSLog(@"start date!");
+   // [self presentModalViewController:(UIViewController *)datePicker animated:YES];
+    [UIView beginAnimations:@"datePicker" context:nil];
+    [UIView setAnimationDuration:0.5f];
+    datePicker.transform = CGAffineTransformMakeTranslation(0, -236);
+    [UIView commitAnimations];
+        
+}
+
+-(IBAction)endDateButtonPressed:(id)sender {
+    NSLog(@"end date!");
 }
 
 @end
