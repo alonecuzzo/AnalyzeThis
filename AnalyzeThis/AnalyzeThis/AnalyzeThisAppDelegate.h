@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GANTracker.h"
 
-@interface AnalyzeThisAppDelegate : NSObject <UIApplicationDelegate> {
+@interface AnalyzeThisAppDelegate : NSObject <UIApplicationDelegate, GANTrackerDelegate> {
 
 }
 

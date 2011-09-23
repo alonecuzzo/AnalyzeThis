@@ -17,6 +17,9 @@
 		0C70D5D8142D150400CBB1D8 /* MainWindow_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C70D5D6142D150400CBB1D8 /* MainWindow_iPhone.xib */; };
 		0C70D5DC142D150400CBB1D8 /* AnalyzeThisAppDelegate_iPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C70D5DB142D150400CBB1D8 /* AnalyzeThisAppDelegate_iPad.m */; };
 		0C70D5DF142D150400CBB1D8 /* MainWindow_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C70D5DD142D150400CBB1D8 /* MainWindow_iPad.xib */; };
+		0C70D5E6142D179500CBB1D8 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C70D5E5142D179500CBB1D8 /* CFNetwork.framework */; };
+		0C70D5EA142D17FE00CBB1D8 /* libGoogleAnalytics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C70D5E9142D17FE00CBB1D8 /* libGoogleAnalytics.a */; };
+		0C70D5EC142D18C500CBB1D8 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C70D5EB142D18C500CBB1D8 /* libsqlite3.0.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +39,10 @@
 		0C70D5DA142D150400CBB1D8 /* AnalyzeThisAppDelegate_iPad.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AnalyzeThisAppDelegate_iPad.h; path = iPad/AnalyzeThisAppDelegate_iPad.h; sourceTree = "<group>"; };
 		0C70D5DB142D150400CBB1D8 /* AnalyzeThisAppDelegate_iPad.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AnalyzeThisAppDelegate_iPad.m; path = iPad/AnalyzeThisAppDelegate_iPad.m; sourceTree = "<group>"; };
 		0C70D5DE142D150400CBB1D8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = iPad/en.lproj/MainWindow_iPad.xib; sourceTree = "<group>"; };
+		0C70D5E5142D179500CBB1D8 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		0C70D5E8142D17FE00CBB1D8 /* GANTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GANTracker.h; sourceTree = "<group>"; };
+		0C70D5E9142D17FE00CBB1D8 /* libGoogleAnalytics.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAnalytics.a; sourceTree = "<group>"; };
+		0C70D5EB142D18C500CBB1D8 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,9 +50,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C70D5EC142D18C500CBB1D8 /* libsqlite3.0.dylib in Frameworks */,
+				0C70D5E6142D179500CBB1D8 /* CFNetwork.framework in Frameworks */,
 				0C70D5C1142D150400CBB1D8 /* UIKit.framework in Frameworks */,
 				0C70D5C3142D150400CBB1D8 /* Foundation.framework in Frameworks */,
 				0C70D5C5142D150400CBB1D8 /* CoreGraphics.framework in Frameworks */,
+				0C70D5EA142D17FE00CBB1D8 /* libGoogleAnalytics.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,6 +65,7 @@
 		0C70D5B1142D150300CBB1D8 = {
 			isa = PBXGroup;
 			children = (
+				0C70D5E7142D17F000CBB1D8 /* Google Analytics */,
 				0C70D5C6142D150400CBB1D8 /* AnalyzeThis */,
 				0C70D5BF142D150400CBB1D8 /* Frameworks */,
 				0C70D5BD142D150400CBB1D8 /* Products */,
@@ -72,6 +83,8 @@
 		0C70D5BF142D150400CBB1D8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0C70D5EB142D18C500CBB1D8 /* libsqlite3.0.dylib */,
+				0C70D5E5142D179500CBB1D8 /* CFNetwork.framework */,
 				0C70D5C0142D150400CBB1D8 /* UIKit.framework */,
 				0C70D5C2142D150400CBB1D8 /* Foundation.framework */,
 				0C70D5C4142D150400CBB1D8 /* CoreGraphics.framework */,
@@ -120,6 +133,15 @@
 				0C70D5DD142D150400CBB1D8 /* MainWindow_iPad.xib */,
 			);
 			name = iPad;
+			sourceTree = "<group>";
+		};
+		0C70D5E7142D17F000CBB1D8 /* Google Analytics */ = {
+			isa = PBXGroup;
+			children = (
+				0C70D5E8142D17FE00CBB1D8 /* GANTracker.h */,
+				0C70D5E9142D17FE00CBB1D8 /* libGoogleAnalytics.a */,
+			);
+			name = "Google Analytics";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,6 +284,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AnalyzeThis/AnalyzeThis-Prefix.pch";
 				INFOPLIST_FILE = "AnalyzeThis/AnalyzeThis-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -275,6 +301,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AnalyzeThis/AnalyzeThis-Prefix.pch";
 				INFOPLIST_FILE = "AnalyzeThis/AnalyzeThis-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
