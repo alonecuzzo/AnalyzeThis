@@ -11,9 +11,12 @@
 
 @interface RequestAnalyticsViewController : UIViewController {
     UIDatePicker *datePicker;
+    IBOutlet UITextField *startDateTF;
 }
 
 @property (nonatomic, retain) UIDatePicker *datePicker;
+@property (nonatomic, retain) IBOutlet UITextField *startDateTF;
+
 
 -(IBAction)startDateButtonPressed:(id)sender;
 -(IBAction)endDateButtonPressed:(id)sender;
