@@ -7,54 +7,20 @@
 //
 
 #import "AnalyzeThisAppDelegate.h"
-#import "GANTracker.h"
 
 @implementation AnalyzeThisAppDelegate
-
-static const NSInteger kGANDispatchPeriodSec = 2;
-static NSString *const kGANAccountId = @"UA-25747927-1";
 
 @synthesize window=_window;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     
-    NSLog(@"HEY");
-    
-    [[GANTracker sharedTracker] startTrackerWithAccountID:kGANAccountId dispatchPeriod:kGANDispatchPeriodSec delegate:self];
-    
-    NSError *error;
-    if (![[GANTracker sharedTracker] setCustomVariableAtIndex:1
-                                                         name:@"iPhone1"
-                                                        value:@"iv1"
-                                                    withError:&error]) {
-        NSLog(@"error in setCustomVariableAtIndex");
-    }
-    
-    if (![[GANTracker sharedTracker] trackEvent:@"Application iPhone"
-                                         action:@"Launch iPhone"
-                                          label:@"Example iPhone"
-                                          value:99
-                                      withError:&error]) {
-        NSLog(@"error in trackEvent");
-    } else {
-        NSLog(@"should be working!");
-    }
-    
     // Override point for customization after application launch.
     [self.window makeKeyAndVisible];
     return YES;
 }
 
-#pragma mark - delegate methods
 
--(void)trackerDispatchDidComplete:(GANTracker *)tracker eventsDispatched:(NSUInteger)hitsDispatched eventsFailedDispatch:(NSUInteger)hitsFailedDispatch{
-    NSLog(@"events dispatched: %d, events failed: %d", hitsDispatched, hitsFailedDispatch);
-}
-
--(void)hitDispatched:(NSString *)hitString{
-    NSLog(@"HIT DISPATCHED!!!, %@", hitString);
-}
 
 
 #pragma mark - ui methods

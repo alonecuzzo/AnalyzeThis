@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C527301142D23DA004F524A /* SendAnalyticsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C5272FF142D23DA004F524A /* SendAnalyticsViewController.m */; };
+		0C527302142D23DA004F524A /* SendAnalyticsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C527300142D23DA004F524A /* SendAnalyticsViewController.xib */; };
 		0C70D5C1142D150400CBB1D8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C70D5C0142D150400CBB1D8 /* UIKit.framework */; };
 		0C70D5C3142D150400CBB1D8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C70D5C2142D150400CBB1D8 /* Foundation.framework */; };
 		0C70D5C5142D150400CBB1D8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C70D5C4142D150400CBB1D8 /* CoreGraphics.framework */; };
@@ -23,6 +25,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0C5272FE142D23DA004F524A /* SendAnalyticsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendAnalyticsViewController.h; sourceTree = "<group>"; };
+		0C5272FF142D23DA004F524A /* SendAnalyticsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendAnalyticsViewController.m; sourceTree = "<group>"; };
+		0C527300142D23DA004F524A /* SendAnalyticsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SendAnalyticsViewController.xib; sourceTree = "<group>"; };
 		0C70D5BC142D150400CBB1D8 /* AnalyzeThis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnalyzeThis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C70D5C0142D150400CBB1D8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0C70D5C2142D150400CBB1D8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -121,6 +126,9 @@
 				0C70D5D3142D150400CBB1D8 /* AnalyzeThisAppDelegate_iPhone.h */,
 				0C70D5D4142D150400CBB1D8 /* AnalyzeThisAppDelegate_iPhone.m */,
 				0C70D5D6142D150400CBB1D8 /* MainWindow_iPhone.xib */,
+				0C5272FE142D23DA004F524A /* SendAnalyticsViewController.h */,
+				0C5272FF142D23DA004F524A /* SendAnalyticsViewController.m */,
+				0C527300142D23DA004F524A /* SendAnalyticsViewController.xib */,
 			);
 			name = iPhone;
 			sourceTree = "<group>";
@@ -194,6 +202,7 @@
 				0C70D5CB142D150400CBB1D8 /* InfoPlist.strings in Resources */,
 				0C70D5D8142D150400CBB1D8 /* MainWindow_iPhone.xib in Resources */,
 				0C70D5DF142D150400CBB1D8 /* MainWindow_iPad.xib in Resources */,
+				0C527302142D23DA004F524A /* SendAnalyticsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,6 +217,7 @@
 				0C70D5D1142D150400CBB1D8 /* AnalyzeThisAppDelegate.m in Sources */,
 				0C70D5D5142D150400CBB1D8 /* AnalyzeThisAppDelegate_iPhone.m in Sources */,
 				0C70D5DC142D150400CBB1D8 /* AnalyzeThisAppDelegate_iPad.m in Sources */,
+				0C527301142D23DA004F524A /* SendAnalyticsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,6 +340,7 @@
 				0C70D5E4142D150400CBB1D8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

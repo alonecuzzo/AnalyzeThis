@@ -9,6 +9,7 @@
 #import "AnalyzeThisAppDelegate_iPhone.h"
 
 @implementation AnalyzeThisAppDelegate_iPhone
+@synthesize tabBar;
 
 - (void)dealloc
 {

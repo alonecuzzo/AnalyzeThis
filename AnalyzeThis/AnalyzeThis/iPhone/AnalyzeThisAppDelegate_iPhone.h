@@ -10,7 +10,9 @@
 #import "AnalyzeThisAppDelegate.h"
 
 @interface AnalyzeThisAppDelegate_iPhone : AnalyzeThisAppDelegate {
-    
+    UITabBarController *tabBar;
 }
+
+@property (nonatomic, retain) UITabBarController *tabBar;
 
 @end
