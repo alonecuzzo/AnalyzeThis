@@ -11,7 +11,7 @@
 @class UIPickerTable;
 
 @interface TestPicker : UIPickerView {
-    UIPickerTable* pickerTable;
+
 }
 
 @end

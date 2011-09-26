@@ -6,14 +6,33 @@
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //  Look at this for reference: http://stackoverflow.com/questions/567805/responding-to-touchesbegan-in-uipickerview-instead-of-uiview/6591975#6591975
 
+//and this http://stackoverflow.com/questions/567805/responding-to-touchesbegan-in-uipickerview-instead-of-uiview
+
 #import "TestPicker.h"
 
 
 @implementation TestPicker
 
+- (UIView *)getNextResponderView:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    UITouch * touch = [touches anyObject];
+    CGPoint point = [touch locationInView:self];
+    UIView * hitTestView = [super hitTest:point withEvent:event];
+    
+     //NSLog(@"hit test class: %@", hitTestView);
+    
+    if(hitTestView != nil) {
+        NSLog(@"hit");
+    } else {
+        NSLog(@"no");
+    }
+        
+    
+    return ( hitTestView == self ) ? nil : hitTestView;
+}
+
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    NSLog(@"LULZZ");
     UIView * hitTestView = [self getNextResponderView:touches withEvent:event];
     [hitTestView touchesBegan:touches withEvent:event];
 }
@@ -41,13 +60,6 @@
     return self;
 }
 
-- (UIView *)getNextResponderView:(NSSet *)touches withEvent:(UIEvent *)event
-{
-    UITouch * touch = [touches anyObject];
-    CGPoint point = [touch locationInView:self];
-    UIView * hitTestView = [super hitTest:point withEvent:event];
-    
-    return ( hitTestView == self ) ? nil : hitTestView;
-}
+
 
 @end

@@ -109,8 +109,6 @@
 	return self;
 }
 
-#pragma mark -
-#pragma mark UIPickerViewDataSource
 
 - (CGFloat)pickerView:(UIPickerView *)pickerView widthForComponent:(NSInteger)component
 {
@@ -133,8 +131,6 @@
 }
 
 
-#pragma mark -
-#pragma mark UIPickerViewDelegate
 
 // tell the picker which view to use for a given component and row, we have an array of views to show
 - (UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row
@@ -145,7 +141,8 @@
 
 
 -(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
-    NSLog(@"lulz");
+    //self.geselecteerdRecept = [self.ReceptCategorieArray objectAtIndex:[pickerView selectedRowInComponent:0]];
+    NSLog(@"selected: %@", [self.customPickerArray objectAtIndex:row]);
 }
 
 
