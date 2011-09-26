@@ -24,6 +24,8 @@
 		0C70D5E6142D179500CBB1D8 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C70D5E5142D179500CBB1D8 /* CFNetwork.framework */; };
 		0C70D5EA142D17FE00CBB1D8 /* libGoogleAnalytics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C70D5E9142D17FE00CBB1D8 /* libGoogleAnalytics.a */; };
 		0C70D5EC142D18C500CBB1D8 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C70D5EB142D18C500CBB1D8 /* libsqlite3.0.dylib */; };
+		0C9FF48F1430ECC300CB61A7 /* CustomPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9FF48E1430ECC300CB61A7 /* CustomPickerView.m */; };
+		0C9FF4921430ED5600CB61A7 /* CustomPickerDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9FF4911430ED5600CB61A7 /* CustomPickerDataSource.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +55,10 @@
 		0C70D5E8142D17FE00CBB1D8 /* GANTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GANTracker.h; sourceTree = "<group>"; };
 		0C70D5E9142D17FE00CBB1D8 /* libGoogleAnalytics.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAnalytics.a; sourceTree = "<group>"; };
 		0C70D5EB142D18C500CBB1D8 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		0C9FF48D1430ECC300CB61A7 /* CustomPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomPickerView.h; sourceTree = "<group>"; };
+		0C9FF48E1430ECC300CB61A7 /* CustomPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomPickerView.m; sourceTree = "<group>"; };
+		0C9FF4901430ED5600CB61A7 /* CustomPickerDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomPickerDataSource.h; sourceTree = "<group>"; };
+		0C9FF4911430ED5600CB61A7 /* CustomPickerDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomPickerDataSource.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +134,7 @@
 		0C70D5D2142D150400CBB1D8 /* iPhone */ = {
 			isa = PBXGroup;
 			children = (
+				0C9FF4881430EC2700CB61A7 /* CustomPickerView */,
 				0C70D5D3142D150400CBB1D8 /* AnalyzeThisAppDelegate_iPhone.h */,
 				0C70D5D4142D150400CBB1D8 /* AnalyzeThisAppDelegate_iPhone.m */,
 				0C70D5D6142D150400CBB1D8 /* MainWindow_iPhone.xib */,
@@ -158,6 +165,17 @@
 				0C70D5E9142D17FE00CBB1D8 /* libGoogleAnalytics.a */,
 			);
 			name = "Google Analytics";
+			sourceTree = "<group>";
+		};
+		0C9FF4881430EC2700CB61A7 /* CustomPickerView */ = {
+			isa = PBXGroup;
+			children = (
+				0C9FF48D1430ECC300CB61A7 /* CustomPickerView.h */,
+				0C9FF48E1430ECC300CB61A7 /* CustomPickerView.m */,
+				0C9FF4901430ED5600CB61A7 /* CustomPickerDataSource.h */,
+				0C9FF4911430ED5600CB61A7 /* CustomPickerDataSource.m */,
+			);
+			name = CustomPickerView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,6 +246,8 @@
 				0C70D5DC142D150400CBB1D8 /* AnalyzeThisAppDelegate_iPad.m in Sources */,
 				0C527301142D23DA004F524A /* SendAnalyticsViewController.m in Sources */,
 				0C1FD19D142D2F6A007A3A67 /* RequestAnalyticsViewController.m in Sources */,
+				0C9FF48F1430ECC300CB61A7 /* CustomPickerView.m in Sources */,
+				0C9FF4921430ED5600CB61A7 /* CustomPickerDataSource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -16,6 +16,8 @@
 @synthesize endDateTF;
 @synthesize metricsPicker;
 
+#pragma mark - picker constants
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
