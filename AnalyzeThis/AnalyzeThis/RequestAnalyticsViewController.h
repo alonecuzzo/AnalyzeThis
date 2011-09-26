@@ -7,12 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CustomPickerDataSource.h"
 
-
-@interface RequestAnalyticsViewController : UIViewController {
+@interface RequestAnalyticsViewController : UIViewController <UIPickerViewDelegate, UIPickerViewDataSource>{
     UIDatePicker *datePicker;
     UIDatePicker *endDatePicker;
     UIPickerView *metricsPicker;
+    CustomPickerDataSource *metricsDataSource;
+    NSMutableArray *pickerViewArray;
+    
     IBOutlet UITextField *startDateTF;
     IBOutlet UITextField *endDateTF;
 }
@@ -20,6 +23,9 @@
 @property (nonatomic, retain) UIDatePicker *datePicker;
 @property (nonatomic, retain) UIDatePicker *endDatePicker;
 @property (nonatomic, retain) UIPickerView *metricsPicker;
+@property (nonatomic, retain) CustomPickerDataSource *metricsDataSource;
+@property (nonatomic, retain) NSMutableArray *pickerViewArray;
+
 @property (nonatomic, retain) IBOutlet UITextField *startDateTF;
 @property (nonatomic, retain) IBOutlet UITextField *endDateTF;
 

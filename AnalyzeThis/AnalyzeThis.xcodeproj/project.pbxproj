@@ -26,6 +26,7 @@
 		0C70D5EC142D18C500CBB1D8 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C70D5EB142D18C500CBB1D8 /* libsqlite3.0.dylib */; };
 		0C9FF48F1430ECC300CB61A7 /* CustomPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9FF48E1430ECC300CB61A7 /* CustomPickerView.m */; };
 		0C9FF4921430ED5600CB61A7 /* CustomPickerDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9FF4911430ED5600CB61A7 /* CustomPickerDataSource.m */; };
+		0C9FF4941430FBF900CB61A7 /* checkmark.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C9FF4931430FBF900CB61A7 /* checkmark.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +60,7 @@
 		0C9FF48E1430ECC300CB61A7 /* CustomPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomPickerView.m; sourceTree = "<group>"; };
 		0C9FF4901430ED5600CB61A7 /* CustomPickerDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomPickerDataSource.h; sourceTree = "<group>"; };
 		0C9FF4911430ED5600CB61A7 /* CustomPickerDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomPickerDataSource.m; sourceTree = "<group>"; };
+		0C9FF4931430FBF900CB61A7 /* checkmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkmark.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 		0C70D5C7142D150400CBB1D8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0C9FF4931430FBF900CB61A7 /* checkmark.png */,
 				0C70D5C8142D150400CBB1D8 /* AnalyzeThis-Info.plist */,
 				0C70D5C9142D150400CBB1D8 /* InfoPlist.strings */,
 				0C70D5CC142D150400CBB1D8 /* AnalyzeThis-Prefix.pch */,
@@ -230,6 +233,7 @@
 				0C70D5DF142D150400CBB1D8 /* MainWindow_iPad.xib in Resources */,
 				0C527302142D23DA004F524A /* SendAnalyticsViewController.xib in Resources */,
 				0C1FD19E142D2F6A007A3A67 /* RequestAnalyticsViewController.xib in Resources */,
+				0C9FF4941430FBF900CB61A7 /* checkmark.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -15,8 +15,36 @@
 @synthesize startDateTF;
 @synthesize endDateTF;
 @synthesize metricsPicker;
+@synthesize metricsDataSource;
+@synthesize pickerViewArray;
 
-#pragma mark - picker constants
+
+-(CGRect)pickerFrameWithSize:(CGSize)size
+{
+    CGRect screenRect = [[UIScreen mainScreen] applicationFrame];
+    CGRect pickerRect = CGRectMake(	0.0,
+                                   screenRect.size.height - 42.0 - size.height,
+                                   size.width,
+                                   size.height);
+    return pickerRect;
+}
+
+
+-(void)createMetricsPicker {
+    metricsPicker = [[UIPickerView alloc] initWithFrame:CGRectZero];
+    metricsPicker.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin;
+    
+    metricsDataSource = [[CustomPickerDataSource alloc] init];
+    metricsPicker.dataSource = metricsDataSource;
+    metricsPicker.delegate = metricsDataSource;
+    
+    CGSize pickerSize = [metricsPicker sizeThatFits:CGSizeZero];
+    metricsPicker.frame = [self pickerFrameWithSize:pickerSize];
+    metricsPicker.showsSelectionIndicator = YES;
+    
+    [self.view addSubview:metricsPicker];
+    [metricsPicker release];
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -40,7 +68,6 @@
     // Release any cached data, images, etc that aren't in use.
 }
 
-#pragma mark - View lifecycle
 
 - (void)viewDidLoad
 {
@@ -69,6 +96,8 @@
     endDateTF.text = [format stringFromDate:endDatePicker.date];
         
     [datePicker release];
+    
+    [self createMetricsPicker];
 }
 
 -(void)endDatePickerValueChanged {
@@ -86,11 +115,14 @@
 }
 
 
+
+
 - (void)viewDidUnload
 {
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
+    
 }
 
 -(void)viewDidDisappear:(BOOL)animated {
@@ -159,7 +191,21 @@
     [UIView commitAnimations];
 }
 
+-(NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
+    
+	NSString *returnStr = @"";
+	return returnStr;
+}
 
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
+{
+	return [pickerViewArray count];
+}
+
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
+{
+	return 2;
+}
 
 
 @end

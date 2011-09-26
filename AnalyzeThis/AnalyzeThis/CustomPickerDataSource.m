@@ -68,8 +68,14 @@
 		// create the data source for this custom picker
 		NSMutableArray *viewArray = [[NSMutableArray alloc] init];
         
-        for (CustomPickerView *view in self.metricNames) {
-            
+        CustomPickerView *customView;
+        
+        for (NSString *viewTitle in self.metricNames) {
+            customView = [[CustomPickerView alloc] initWithFrame:CGRectZero];
+            customView.title = viewTitle;
+            customView.image = [UIImage imageNamed:@"checkmark.png"];
+            [viewArray addObject:customView];
+            [customView release];
         }
         
         
@@ -101,6 +107,40 @@
 		[viewArray release];
 	}
 	return self;
+}
+
+#pragma mark -
+#pragma mark UIPickerViewDataSource
+
+- (CGFloat)pickerView:(UIPickerView *)pickerView widthForComponent:(NSInteger)component
+{
+	return [CustomPickerView viewWidth];
+}
+
+- (CGFloat)pickerView:(UIPickerView *)pickerView rowHeightForComponent:(NSInteger)component
+{
+	return [CustomPickerView viewHeight];
+}
+
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
+{
+	return [customPickerArray count];
+}
+
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
+{
+	return 1;
+}
+
+
+#pragma mark -
+#pragma mark UIPickerViewDelegate
+
+// tell the picker which view to use for a given component and row, we have an array of views to show
+- (UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row
+		  forComponent:(NSInteger)component reusingView:(UIView *)view
+{
+	return [customPickerArray objectAtIndex:row];
 }
 
 @end
