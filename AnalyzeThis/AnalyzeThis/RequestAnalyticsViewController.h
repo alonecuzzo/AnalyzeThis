@@ -8,11 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "CustomPickerDataSource.h"
+#import "TestPicker.h"
 
 @interface RequestAnalyticsViewController : UIViewController <UIPickerViewDelegate, UIPickerViewDataSource>{
     UIDatePicker *datePicker;
     UIDatePicker *endDatePicker;
-    UIPickerView *metricsPicker;
+    TestPicker *metricsPicker;
     CustomPickerDataSource *metricsDataSource;
     NSMutableArray *pickerViewArray;
     

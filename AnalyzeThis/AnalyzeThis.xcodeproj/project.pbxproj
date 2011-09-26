@@ -27,6 +27,7 @@
 		0C9FF48F1430ECC300CB61A7 /* CustomPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9FF48E1430ECC300CB61A7 /* CustomPickerView.m */; };
 		0C9FF4921430ED5600CB61A7 /* CustomPickerDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9FF4911430ED5600CB61A7 /* CustomPickerDataSource.m */; };
 		0C9FF4941430FBF900CB61A7 /* checkmark.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C9FF4931430FBF900CB61A7 /* checkmark.png */; };
+		0CC54DE914311A2900BA4BCA /* TestPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CC54DE814311A2900BA4BCA /* TestPicker.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +62,8 @@
 		0C9FF4901430ED5600CB61A7 /* CustomPickerDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomPickerDataSource.h; sourceTree = "<group>"; };
 		0C9FF4911430ED5600CB61A7 /* CustomPickerDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomPickerDataSource.m; sourceTree = "<group>"; };
 		0C9FF4931430FBF900CB61A7 /* checkmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkmark.png; sourceTree = "<group>"; };
+		0CC54DE714311A2900BA4BCA /* TestPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestPicker.h; sourceTree = "<group>"; };
+		0CC54DE814311A2900BA4BCA /* TestPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestPicker.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +180,8 @@
 				0C9FF48E1430ECC300CB61A7 /* CustomPickerView.m */,
 				0C9FF4901430ED5600CB61A7 /* CustomPickerDataSource.h */,
 				0C9FF4911430ED5600CB61A7 /* CustomPickerDataSource.m */,
+				0CC54DE714311A2900BA4BCA /* TestPicker.h */,
+				0CC54DE814311A2900BA4BCA /* TestPicker.m */,
 			);
 			name = CustomPickerView;
 			sourceTree = "<group>";
@@ -252,6 +257,7 @@
 				0C1FD19D142D2F6A007A3A67 /* RequestAnalyticsViewController.m in Sources */,
 				0C9FF48F1430ECC300CB61A7 /* CustomPickerView.m in Sources */,
 				0C9FF4921430ED5600CB61A7 /* CustomPickerDataSource.m in Sources */,
+				0CC54DE914311A2900BA4BCA /* TestPicker.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

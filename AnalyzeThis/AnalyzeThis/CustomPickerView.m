@@ -14,7 +14,7 @@
 @implementation CustomPickerView
 @synthesize  title, image;
 
-const CGFloat kViewWidth = 200;
+const CGFloat kViewWidth = 300;
 const CGFloat kViewHeight = 44;
 
 
@@ -38,6 +38,10 @@ const CGFloat kViewHeight = 44;
         self.backgroundColor = [UIColor clearColor];
     }
     return self;
+}
+
+-(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
+    NSLog(@"sdfad");
 }
 
 

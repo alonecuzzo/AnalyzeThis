@@ -31,19 +31,26 @@
 
 
 -(void)createMetricsPicker {
-    metricsPicker = [[UIPickerView alloc] initWithFrame:CGRectZero];
+    metricsPicker = [[TestPicker alloc] initWithFrame:CGRectZero];
     metricsPicker.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin;
     
     metricsDataSource = [[CustomPickerDataSource alloc] init];
     metricsPicker.dataSource = metricsDataSource;
     metricsPicker.delegate = metricsDataSource;
+   // [metricsPicker addTarget:self action:@selector(metricPickerValueChanged) forControlEvents:UIControlEventTouchUpInside];
+    //[metricsPicker.pickerTable 
     
     CGSize pickerSize = [metricsPicker sizeThatFits:CGSizeZero];
     metricsPicker.frame = [self pickerFrameWithSize:pickerSize];
-    metricsPicker.showsSelectionIndicator = YES;
+    metricsPicker.showsSelectionIndicator = NO;
     
     [self.view addSubview:metricsPicker];
     [metricsPicker release];
+}
+
+
+-(void)metricPickerValueChanged {
+    
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -206,6 +213,7 @@
 {
 	return 2;
 }
+
 
 
 @end
