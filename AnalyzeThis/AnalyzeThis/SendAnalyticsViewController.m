@@ -9,7 +9,7 @@
 #import "SendAnalyticsViewController.h"
 #import "GANTracker.h"
 
-static const NSInteger kGANDispatchPeriodSec = 10;
+static const NSInteger kGANDispatchPeriodSec = 2;
 static NSString *const kGANAccountId = @"UA-25747927-1";
 
 @implementation SendAnalyticsViewController
@@ -102,7 +102,7 @@ static NSString *const kGANAccountId = @"UA-25747927-1";
     NSLog(@"setting custom variable!");
     NSError *error;
     if (![[GANTracker sharedTracker] setCustomVariableAtIndex:1
-                                                         name:@"iPhone1"
+                                                         name:@"Our Custom Variable"
                                                         value:@"iv1"
                                                     withError:&error]) {
         NSLog(@"error in setCustomVariableAtIndex");

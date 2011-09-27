@@ -12,10 +12,13 @@
 @interface CustomPickerView : UIView {
     NSString *title;
     UIImage *image;
+    UIImageView *imageView;
 }
 
 @property(nonatomic, retain) NSString *title;
 @property(nonatomic, retain) UIImage *image;
+@property(nonatomic, retain) UIImageView *imageView;
+
 
 + (CGFloat)viewWidth;
 + (CGFloat)viewHeight;

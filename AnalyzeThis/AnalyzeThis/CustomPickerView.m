@@ -12,7 +12,7 @@
 #define MIN_MAIN_FONT_SIZE 16
 
 @implementation CustomPickerView
-@synthesize  title, image;
+@synthesize  title, image, imageView;
 
 const CGFloat kViewWidth = 300;
 const CGFloat kViewHeight = 44;
@@ -49,7 +49,10 @@ const CGFloat kViewHeight = 44;
     // draw the image and title using their draw methods
 	CGFloat yCoord = (self.bounds.size.height - self.image.size.height) / 2;
 	CGPoint point = CGPointMake(10.0, yCoord);
-	[self.image drawAtPoint:point];
+	//[self.image drawAtPoint:point];
+    
+    imageView = [[UIImageView alloc] initWithImage:self.image];
+    [self addSubview:imageView];
 	
 	yCoord = (self.bounds.size.height - MAIN_FONT_SIZE) / 2;
 	point = CGPointMake(10.0 + self.image.size.width + 10.0, yCoord);
