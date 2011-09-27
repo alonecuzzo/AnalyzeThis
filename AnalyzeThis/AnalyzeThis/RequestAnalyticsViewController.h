@@ -36,5 +36,6 @@
 -(IBAction)onMetricsPress:(id)sender;
 -(IBAction)onDimensionsPress:(id)sender;
 -(void)translateDatePicker:(UIDatePicker *)picker isStartPicker:(BOOL)isStart showMe:(BOOL)shouldShow;
+-(void)setRequestString:(NSString*)reqString;
 
 @end

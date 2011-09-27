@@ -54,6 +54,12 @@
     
 }
 
+
+-(void)setRequestString:(NSString *)reqString{
+    NSLog(@"request string: %@", reqString);
+}
+
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];

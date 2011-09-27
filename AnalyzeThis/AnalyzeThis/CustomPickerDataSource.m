@@ -151,6 +151,7 @@ RequestAnalyticsViewController *requestView;
     CustomPickerView *currentView = (CustomPickerView *)[self.customPickerArray objectAtIndex:row];
      NSLog(@"selected: %@", currentView.title);
     [currentView toggleCheckMark];
+    [requestView setRequestString:currentView.title];
 }
 
 
