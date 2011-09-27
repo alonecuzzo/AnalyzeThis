@@ -31,7 +31,7 @@
 
 
 -(void)createMetricsPicker {
-    metricsPicker = [[TestPicker alloc] initWithFrame:CGRectZero];
+    metricsPicker = [[UIPickerView alloc] initWithFrame:CGRectZero];
     metricsPicker.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin;
     
     metricsDataSource = [[CustomPickerDataSource alloc] init];
@@ -56,7 +56,7 @@
 
 
 -(void)setRequestString:(NSString *)reqString{
-    NSLog(@"request string: %@", reqString);
+   NSLog(@"request string: %@", reqString);
 }
 
 

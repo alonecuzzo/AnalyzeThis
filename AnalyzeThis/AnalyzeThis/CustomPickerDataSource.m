@@ -82,6 +82,7 @@ RequestAnalyticsViewController *requestView;
             customView = [[CustomPickerView alloc] initWithFrame:CGRectZero];
             customView.title = viewTitle;
             customView.image = [UIImage imageNamed:@"checkmark.png"];
+            //[customView toggleCheckMark];
             [viewArray addObject:customView];
             [customView release];
         }
@@ -151,7 +152,20 @@ RequestAnalyticsViewController *requestView;
     CustomPickerView *currentView = (CustomPickerView *)[self.customPickerArray objectAtIndex:row];
      NSLog(@"selected: %@", currentView.title);
     [currentView toggleCheckMark];
-    [requestView setRequestString:currentView.title];
+    [currentView toggleTitle];
+    NSString *requestString = @"results: ";
+    
+    for (CustomPickerView *cView in self.customPickerArray) {
+       // NSLog(@"value: %@ is visible: %d", cView.title,  [cView getTitleToggle]);
+        if ([cView getTitleToggle] == 1) {
+            requestString = [requestString stringByAppendingString:cView.title];
+            requestString = [requestString stringByAppendingString:@", "];
+        }
+//        [cView release];
+    }
+    
+    [requestView setRequestString:requestString];
+    //[requestString release];
 }
 
 

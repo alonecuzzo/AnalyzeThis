@@ -13,7 +13,7 @@
 @interface RequestAnalyticsViewController : UIViewController <UIPickerViewDelegate, UIPickerViewDataSource>{
     UIDatePicker *datePicker;
     UIDatePicker *endDatePicker;
-    TestPicker *metricsPicker;
+    UIPickerView *metricsPicker;
     CustomPickerDataSource *metricsDataSource;
     NSMutableArray *pickerViewArray;
     

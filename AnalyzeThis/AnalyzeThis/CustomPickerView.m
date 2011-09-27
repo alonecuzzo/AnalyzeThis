@@ -12,10 +12,12 @@
 #define MIN_MAIN_FONT_SIZE 16
 
 @implementation CustomPickerView
-@synthesize  title, image, imageView;
+@synthesize  title, image, isHidden;
+@synthesize imageView;
 
 const CGFloat kViewWidth = 300;
 const CGFloat kViewHeight = 44;
+
 
 
 +(CGFloat)viewWidth
@@ -29,12 +31,23 @@ const CGFloat kViewHeight = 44;
     return kViewHeight;
 }
 
--(void)toggleCheckMark{
-    if(self.imageView.hidden == YES){
-        self.imageView.hidden = NO; 
+-(int)getTitleToggle{
+    return tTitle;
+}
+
+-(int)toggleTitle{
+    if (tTitle == 0)
+    {
+        tTitle = 1;
     } else {
-        self.imageView.hidden = YES;
+        tTitle = 0;
     }
+    return tTitle;
+}
+
+-(void)toggleCheckMark{
+    self.isHidden = !self.isHidden;
+    self.imageView.hidden = isHidden;
 }
 
 
@@ -56,14 +69,14 @@ const CGFloat kViewHeight = 44;
 	CGPoint point = CGPointMake(10.0, yCoord);
 	//[self.image drawAtPoint:point];
     
-    imageView = [[UIImageView alloc] initWithImage:self.image];
-    [self addSubview:imageView];
-	CGRect viewFrame = imageView.frame;
+    self.imageView = [[UIImageView alloc] initWithImage:self.image];
+    [self addSubview:self.imageView];
+	CGRect viewFrame = self.imageView.frame;
     viewFrame.origin.x = 10.0;
     viewFrame.origin.y = yCoord + 3;
-    imageView.frame = viewFrame;
-    
-    imageView.hidden = YES;
+    self.imageView.frame = viewFrame;
+    self.imageView.hidden = YES;
+    isHidden = YES;
     
 	yCoord = (self.bounds.size.height - MAIN_FONT_SIZE) / 2;
 	point = CGPointMake(10.0 + self.image.size.width + 10.0, yCoord);
@@ -74,6 +87,11 @@ const CGFloat kViewHeight = 44;
              actualFontSize:NULL
               lineBreakMode:UILineBreakModeTailTruncation
          baselineAdjustment:UIBaselineAdjustmentAlignBaselines];
+}
+
+
+-(BOOL)getCheckMarkVisibility{
+    return self.isHidden;
 }
 
 
@@ -93,6 +111,7 @@ const CGFloat kViewHeight = 44;
 {
 	[title release];
 	[image release];
+    [imageView release];
 	
 	[super dealloc];
 }

@@ -21,11 +21,11 @@
     
      //NSLog(@"hit test class: %@", hitTestView);
     
-    if(hitTestView != nil) {
-        NSLog(@"hit");
-    } else {
-        NSLog(@"no");
-    }
+//    if(hitTestView != nil) {
+//        NSLog(@"hit");
+//    } else {
+//        NSLog(@"no");
+//    }
         
     
     return ( hitTestView == self ) ? nil : hitTestView;
