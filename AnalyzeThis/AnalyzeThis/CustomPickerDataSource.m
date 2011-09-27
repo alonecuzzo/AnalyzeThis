@@ -8,10 +8,18 @@
 
 #import "CustomPickerDataSource.h"
 #import "CustomPickerView.h"
+#import "RequestAnalyticsViewController.h"
 
+RequestAnalyticsViewController *requestView;
 
 @implementation CustomPickerDataSource
 @synthesize customPickerArray;
+
+
+-(void)setRequestView:(id)rv{
+    requestView = (RequestAnalyticsViewController *)rv;
+    [rv release];
+}
 
 
 - (NSArray *)dimensionNames {
@@ -131,7 +139,6 @@
 }
 
 
-
 // tell the picker which view to use for a given component and row, we have an array of views to show
 - (UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row
 		  forComponent:(NSInteger)component reusingView:(UIView *)view
@@ -141,8 +148,9 @@
 
 
 -(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
-    //self.geselecteerdRecept = [self.ReceptCategorieArray objectAtIndex:[pickerView selectedRowInComponent:0]];
-    NSLog(@"selected: %@", [self.customPickerArray objectAtIndex:row]);
+    CustomPickerView *currentView = (CustomPickerView *)[self.customPickerArray objectAtIndex:row];
+     NSLog(@"selected: %@", currentView.title);
+    [currentView toggleCheckMark];
 }
 
 

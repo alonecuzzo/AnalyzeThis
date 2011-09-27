@@ -35,6 +35,7 @@
     metricsPicker.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin;
     
     metricsDataSource = [[CustomPickerDataSource alloc] init];
+    [metricsDataSource setRequestView:self];
     metricsPicker.dataSource = metricsDataSource;
     metricsPicker.delegate = metricsDataSource;
    // [metricsPicker addTarget:self action:@selector(metricPickerValueChanged) forControlEvents:UIControlEventTouchUpInside];

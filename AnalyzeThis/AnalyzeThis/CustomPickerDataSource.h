@@ -7,12 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
-
+//#import "RequestAnalyticsViewController.h"
 
 @interface CustomPickerDataSource : NSObject <UIPickerViewDataSource, UIPickerViewDelegate> {
     NSArray	*customPickerArray;
 }
 
+
 @property (nonatomic, retain) NSArray *customPickerArray;
+
+-(void)setRequestView:(id)rv;
+
 
 @end

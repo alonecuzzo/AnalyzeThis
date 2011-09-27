@@ -29,6 +29,14 @@ const CGFloat kViewHeight = 44;
     return kViewHeight;
 }
 
+-(void)toggleCheckMark{
+    if(self.imageView.hidden == YES){
+        self.imageView.hidden = NO; 
+    } else {
+        self.imageView.hidden = YES;
+    }
+}
+
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -40,9 +48,6 @@ const CGFloat kViewHeight = 44;
     return self;
 }
 
--(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
-    NSLog(@"sdfad");
-}
 
 
 -(void)drawRect:(CGRect)rect{
@@ -53,7 +58,13 @@ const CGFloat kViewHeight = 44;
     
     imageView = [[UIImageView alloc] initWithImage:self.image];
     [self addSubview:imageView];
-	
+	CGRect viewFrame = imageView.frame;
+    viewFrame.origin.x = 10.0;
+    viewFrame.origin.y = yCoord + 3;
+    imageView.frame = viewFrame;
+    
+    imageView.hidden = YES;
+    
 	yCoord = (self.bounds.size.height - MAIN_FONT_SIZE) / 2;
 	point = CGPointMake(10.0 + self.image.size.width + 10.0, yCoord);
 	[self.title drawAtPoint:point
